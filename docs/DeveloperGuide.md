@@ -191,9 +191,37 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (un
 
 *{More to be added}*
 
-### Use cases
+## Use cases
 
 (For all use cases below, the **System** is the `ListingBook` and the **Actor** is the `Recruiter` unless specified otherwise)
+
+**Use case: Add a new job listing**
+
+**MSS**
+
+1. The recruiter requests to add a new job listing.
+2. ListingBook adds the job listing to the list of job listings.
+
+   Use case ends.
+
+**Extensions**
+
+- 2a. The placeholders used are invalid.
+    - 2a1. ListingBook shows an error message.
+    - Use case resumes at step 1.
+
+- 2b. The new job title is invalid.
+    - 2b1. ListingBook shows an error message.
+    - Use case resumes at step 1.
+
+- 2c. The new job description is invalid.
+    - 2c1. ListingBook shows an error message.
+    - Use case resumes at step 1.
+
+- 2d. There is a duplicate listing in the listing book.
+    - 2d1. ListingBook shows an error message.
+    - Use case resumes at step 1.
+
 
 **Use case: Delete a Listing**
 
@@ -234,32 +262,6 @@ Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`, Low (un
     Use case ends.
 
 
-**Use case: Add a new job listing**
-
-**MSS**
-
-1. The recruiter requests to add a new job listing.
-2. ListingBook adds the job listing to the list of job listings.
-
-    Use case ends.
-
-**Extensions**
-
-- 2a. The placeholders used are invalid.
-    - 2a1. ListingBook shows an error message.
-    - Use case resumes at step 1.
-
-- 2b. The new job title is invalid.
-    - 2b1. ListingBook shows an error message.
-    - Use case resumes at step 1.
-
-- 2c. The new job description is invalid.
-    - 2c1. ListingBook shows an error message.
-    - Use case resumes at step 1.
-
-- 2d. There is a duplicate listing in the listing book.
-    - 2d1. ListingBook shows an error message.
-    - Use case resumes at step 1.
 
 **Use case: Update a job listing**
 
